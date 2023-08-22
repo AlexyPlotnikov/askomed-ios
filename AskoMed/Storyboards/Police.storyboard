@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-ExtraBold.ttf">
+            <string>Inter-ExtraBold</string>
+        </array>
+        <array key="Inter-Medium.ttf">
+            <string>Inter-Medium</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--New Police Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="newPoliceVC" id="Y6W-OH-hqX" customClass="NewPoliceController" customModule="AskoMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qXc-t5-waA">
+                                <rect key="frame" x="16" y="47" width="358" height="797"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавление страхового полиса" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqf-oQ-SbM">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="0PR-YU-su8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="246" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eFF-zT-98m">
+                                        <rect key="frame" x="0.0" y="84" width="358" height="713"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="personInfoCell" rowHeight="258" id="nvD-00-QTm" customClass="NewPoliceCell" customModule="AskoMed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="358" height="258"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nvD-00-QTm" id="pAz-Jz-lKk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="258"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Inu-FW-ZRz">
+                                                            <rect key="frame" x="0.0" y="6" width="358" height="246"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о застрахованном" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncf-X2-PoY">
+                                                                    <rect key="frame" x="16" y="16" width="326" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ФИО" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mos-9L-kdn" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="56" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="KiQ-PH-942"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Дата рождения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNL-Xy-bFm" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="118" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="O8B-Wt-1h7"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Телефон" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-zW-0JH" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="180" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="icl-PR-3Hv"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="ncf-X2-PoY" firstAttribute="leading" secondItem="Inu-FW-ZRz" secondAttribute="leading" constant="16" id="1gI-A6-aC6"/>
+                                                                <constraint firstItem="ncf-X2-PoY" firstAttribute="top" secondItem="Inu-FW-ZRz" secondAttribute="top" constant="16" id="6Kl-9N-zEj"/>
+                                                                <constraint firstItem="gFc-zW-0JH" firstAttribute="top" secondItem="aNL-Xy-bFm" secondAttribute="bottom" constant="12" id="6Ns-05-fwZ"/>
+                                                                <constraint firstItem="mos-9L-kdn" firstAttribute="leading" secondItem="Inu-FW-ZRz" secondAttribute="leading" constant="16" id="BaL-pz-l16"/>
+                                                                <constraint firstAttribute="bottom" secondItem="gFc-zW-0JH" secondAttribute="bottom" constant="16" id="FRH-mn-BLq"/>
+                                                                <constraint firstAttribute="trailing" secondItem="aNL-Xy-bFm" secondAttribute="trailing" constant="16" id="IwX-cm-PKe"/>
+                                                                <constraint firstAttribute="trailing" secondItem="ncf-X2-PoY" secondAttribute="trailing" constant="16" id="Jev-8M-MFl"/>
+                                                                <constraint firstAttribute="trailing" secondItem="gFc-zW-0JH" secondAttribute="trailing" constant="16" id="VhK-4e-g98"/>
+                                                                <constraint firstItem="aNL-Xy-bFm" firstAttribute="top" secondItem="mos-9L-kdn" secondAttribute="bottom" constant="12" id="a9w-La-sPj"/>
+                                                                <constraint firstAttribute="trailing" secondItem="mos-9L-kdn" secondAttribute="trailing" constant="16" id="bZa-0V-D2x"/>
+                                                                <constraint firstItem="gFc-zW-0JH" firstAttribute="leading" secondItem="Inu-FW-ZRz" secondAttribute="leading" constant="16" id="d03-wB-tAH"/>
+                                                                <constraint firstItem="mos-9L-kdn" firstAttribute="top" secondItem="ncf-X2-PoY" secondAttribute="bottom" constant="20" id="v96-L3-1cf"/>
+                                                                <constraint firstItem="aNL-Xy-bFm" firstAttribute="leading" secondItem="Inu-FW-ZRz" secondAttribute="leading" constant="16" id="zBS-wq-Asa"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Inu-FW-ZRz" firstAttribute="leading" secondItem="pAz-Jz-lKk" secondAttribute="leading" id="2Of-3z-OtH"/>
+                                                        <constraint firstItem="Inu-FW-ZRz" firstAttribute="top" secondItem="pAz-Jz-lKk" secondAttribute="top" constant="6" id="DKO-nZ-KvD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Inu-FW-ZRz" secondAttribute="bottom" constant="6" id="dEP-WU-o6G"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Inu-FW-ZRz" secondAttribute="trailing" id="xKF-96-pPU"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="backView" destination="Inu-FW-ZRz" id="8Og-lM-s6n"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="insuranceInfoCell" rowHeight="290" id="8Vo-BJ-NRd" customClass="NewPoliceCell" customModule="AskoMed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="308" width="358" height="290"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Vo-BJ-NRd" id="hKL-cs-efD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="290"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aD9-bF-Tfc">
+                                                            <rect key="frame" x="0.0" y="6" width="358" height="278"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о страховании" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2y-rw-mc1">
+                                                                    <rect key="frame" x="16" y="16" width="326" height="19.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Страховая программа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Wg-AK-Hzi" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="55.666666666666657" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="wZs-cX-V1l"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер полиса" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WNE-8U-kIG" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="117.66666666666669" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="J9l-Rg-Nat"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="От" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P1K-mt-3jI" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="212" width="146" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="XfM-6j-Agl"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phg-VO-UIi">
+                                                                    <rect key="frame" x="170" y="236" width="15" height="2"/>
+                                                                    <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="15" id="qmO-1W-MVm"/>
+                                                                        <constraint firstAttribute="height" constant="2" id="v6P-v1-LGO"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="До" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Xx-kC-x5x" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="193" y="212" width="146" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="mvR-qF-Hr7"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Срок действия полиса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5A-Wm-8Hj">
+                                                                    <rect key="frame" x="16" y="183.66666666666666" width="326" height="20.333333333333343"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="9Wg-AK-Hzi" firstAttribute="leading" secondItem="aD9-bF-Tfc" secondAttribute="leading" constant="16" id="1sC-fy-G3l"/>
+                                                                <constraint firstAttribute="trailing" secondItem="h2y-rw-mc1" secondAttribute="trailing" constant="16" id="4db-N6-Tlw"/>
+                                                                <constraint firstItem="WNE-8U-kIG" firstAttribute="top" secondItem="9Wg-AK-Hzi" secondAttribute="bottom" constant="12" id="6g7-CL-feM"/>
+                                                                <constraint firstItem="P1K-mt-3jI" firstAttribute="width" secondItem="aD9-bF-Tfc" secondAttribute="width" multiplier="0.408" id="94j-S8-riB"/>
+                                                                <constraint firstItem="X5A-Wm-8Hj" firstAttribute="leading" secondItem="aD9-bF-Tfc" secondAttribute="leading" constant="16" id="CqQ-1R-DvT"/>
+                                                                <constraint firstItem="phg-VO-UIi" firstAttribute="centerY" secondItem="8Xx-kC-x5x" secondAttribute="centerY" id="Gey-6c-vjE"/>
+                                                                <constraint firstItem="X5A-Wm-8Hj" firstAttribute="top" secondItem="WNE-8U-kIG" secondAttribute="bottom" constant="16" id="PdH-1M-0gW"/>
+                                                                <constraint firstItem="8Xx-kC-x5x" firstAttribute="leading" secondItem="phg-VO-UIi" secondAttribute="trailing" constant="8" id="UUC-O5-wda"/>
+                                                                <constraint firstItem="h2y-rw-mc1" firstAttribute="leading" secondItem="aD9-bF-Tfc" secondAttribute="leading" constant="16" id="UUw-LC-e3e"/>
+                                                                <constraint firstAttribute="trailing" secondItem="WNE-8U-kIG" secondAttribute="trailing" constant="16" id="Xo3-QA-M34"/>
+                                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="P1K-mt-3jI" secondAttribute="bottom" constant="16" id="ZII-Sp-6x0"/>
+                                                                <constraint firstItem="h2y-rw-mc1" firstAttribute="top" secondItem="aD9-bF-Tfc" secondAttribute="top" constant="16" id="bKJ-wr-fEN"/>
+                                                                <constraint firstItem="8Xx-kC-x5x" firstAttribute="width" secondItem="P1K-mt-3jI" secondAttribute="width" id="cd2-4h-QzC"/>
+                                                                <constraint firstAttribute="trailing" secondItem="9Wg-AK-Hzi" secondAttribute="trailing" constant="16" id="gDv-b1-S8v"/>
+                                                                <constraint firstItem="phg-VO-UIi" firstAttribute="centerY" secondItem="P1K-mt-3jI" secondAttribute="centerY" id="hFn-Td-cTC"/>
+                                                                <constraint firstItem="P1K-mt-3jI" firstAttribute="leading" secondItem="aD9-bF-Tfc" secondAttribute="leading" constant="16" id="iJK-9f-CCB"/>
+                                                                <constraint firstAttribute="trailing" secondItem="X5A-Wm-8Hj" secondAttribute="trailing" constant="16" id="jdG-8A-YUg"/>
+                                                                <constraint firstItem="WNE-8U-kIG" firstAttribute="leading" secondItem="aD9-bF-Tfc" secondAttribute="leading" constant="16" id="n57-ws-KVG"/>
+                                                                <constraint firstItem="9Wg-AK-Hzi" firstAttribute="top" secondItem="h2y-rw-mc1" secondAttribute="bottom" constant="20" id="qIW-Kc-EUX"/>
+                                                                <constraint firstItem="P1K-mt-3jI" firstAttribute="top" secondItem="X5A-Wm-8Hj" secondAttribute="bottom" constant="8" symbolic="YES" id="uPK-84-tt7"/>
+                                                                <constraint firstItem="phg-VO-UIi" firstAttribute="leading" secondItem="P1K-mt-3jI" secondAttribute="trailing" constant="8" id="zOT-jW-JGN"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="aD9-bF-Tfc" firstAttribute="top" secondItem="hKL-cs-efD" secondAttribute="top" constant="6" id="3Zn-np-fne"/>
+                                                        <constraint firstItem="aD9-bF-Tfc" firstAttribute="leading" secondItem="hKL-cs-efD" secondAttribute="leading" id="gbc-xW-WfZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="aD9-bF-Tfc" secondAttribute="trailing" id="jNK-jA-aFY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="aD9-bF-Tfc" secondAttribute="bottom" constant="6" id="p5l-4U-OR7"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="backView" destination="aD9-bF-Tfc" id="srv-iO-uVB"/>
+                                                    <outlet property="insuranceField" destination="9Wg-AK-Hzi" id="pKh-Ik-ejQ"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="attachPhotoCell" rowHeight="128" id="y5X-BS-8Ui" customClass="NewPoliceCell" customModule="AskoMed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="598" width="358" height="128"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y5X-BS-8Ui" id="1sf-dn-ofR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnc-jV-zJz">
+                                                            <rect key="frame" x="0.0" y="6" width="358" height="116"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attachImage" translatesAutoresizingMaskIntoConstraints="NO" id="UY9-I2-UuK">
+                                                                    <rect key="frame" x="16" y="16" width="84" height="84"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="84" id="3IN-NN-LWd"/>
+                                                                        <constraint firstAttribute="height" constant="84" id="Tjp-yh-xQd"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страховой полис" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Kr-gd-Wfq">
+                                                                    <rect key="frame" x="116.00000000000001" y="36" width="131.33333333333337" height="18.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страница 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwT-nU-AV0">
+                                                                    <rect key="frame" x="116" y="58.333333333333329" width="78" height="17"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                    <color key="textColor" red="0.56862745098039214" green="0.57647058823529407" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="UY9-I2-UuK" secondAttribute="bottom" constant="16" id="1xS-hu-RHy"/>
+                                                                <constraint firstItem="ZwT-nU-AV0" firstAttribute="top" secondItem="4Kr-gd-Wfq" secondAttribute="bottom" constant="4" id="5e3-oV-pe9"/>
+                                                                <constraint firstItem="UY9-I2-UuK" firstAttribute="top" secondItem="Qnc-jV-zJz" secondAttribute="top" constant="16" id="Gbg-Ra-AKt"/>
+                                                                <constraint firstItem="4Kr-gd-Wfq" firstAttribute="leading" secondItem="UY9-I2-UuK" secondAttribute="trailing" constant="16" id="TAU-yU-uzq"/>
+                                                                <constraint firstItem="UY9-I2-UuK" firstAttribute="leading" secondItem="Qnc-jV-zJz" secondAttribute="leading" constant="16" id="XeI-Sd-9Lj"/>
+                                                                <constraint firstItem="ZwT-nU-AV0" firstAttribute="leading" secondItem="UY9-I2-UuK" secondAttribute="trailing" constant="16" id="Ymr-Oz-VlS"/>
+                                                                <constraint firstItem="4Kr-gd-Wfq" firstAttribute="top" secondItem="Qnc-jV-zJz" secondAttribute="top" constant="36" id="iJM-eu-x1T"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Qnc-jV-zJz" firstAttribute="leading" secondItem="1sf-dn-ofR" secondAttribute="leading" id="JUt-BT-Dlb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Qnc-jV-zJz" secondAttribute="trailing" id="S3c-S3-Tbz"/>
+                                                        <constraint firstItem="Qnc-jV-zJz" firstAttribute="top" secondItem="1sf-dn-ofR" secondAttribute="top" constant="6" id="esl-J7-vUA"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Qnc-jV-zJz" secondAttribute="bottom" constant="6" id="plT-99-eoH"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="backView" destination="Qnc-jV-zJz" id="n85-sn-eRu"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Y6W-OH-hqX" id="Hdq-K3-lqg"/>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="rGs-eh-EZ4"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wr-7Y-sxL">
+                                <rect key="frame" x="16" y="748" width="358" height="50"/>
+                                <color key="backgroundColor" red="0.047058823529411764" green="0.68627450980392157" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="p36-I7-3j7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Добавить"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8wr-7Y-sxL" secondAttribute="trailing" constant="16" id="2Fl-vD-Y0W"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8wr-7Y-sxL" secondAttribute="bottom" constant="12" id="ChN-kk-lKh"/>
+                            <constraint firstItem="8wr-7Y-sxL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Moz-QC-F2u"/>
+                            <constraint firstItem="qXc-t5-waA" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-16" id="kwU-6z-C40"/>
+                            <constraint firstItem="qXc-t5-waA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="tPn-2a-3Hf"/>
+                            <constraint firstAttribute="bottom" secondItem="qXc-t5-waA" secondAttribute="bottom" id="tcB-Aa-I4p"/>
+                            <constraint firstItem="qXc-t5-waA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="va4-m9-t5f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="eFF-zT-98m" id="ZIO-U1-Wqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.538461538461533" y="2.8436018957345972"/>
+        </scene>
+        <!--Choose Insurance Controller-->
+        <scene sceneID="bou-oG-Czu">
+            <objects>
+                <viewController storyboardIdentifier="chooseInsurance" id="9SS-vh-MzO" customClass="ChooseInsuranceController" customModule="AskoMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NCc-Zk-vPM">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KUW-Wy-HvX">
+                                <rect key="frame" x="16" y="47" width="358" height="797"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Поиск" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uxo-nr-epf">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9l5-us-VbD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8J2-hE-ha8">
+                                        <rect key="frame" x="0.0" y="66" width="358" height="731"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="insuranceCell" rowHeight="46" id="IIp-Ri-MXE" customClass="InsuranceCell" customModule="AskoMed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="358" height="46"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IIp-Ri-MXE" id="r6J-lY-z6X">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Альфа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgt-Px-Ckj">
+                                                            <rect key="frame" x="32" y="13.999999999999998" width="298" height="18.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insuranceIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ovQ-zc-GIl">
+                                                            <rect key="frame" x="0.0" y="11" width="24" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="ovQ-zc-GIl" secondAttribute="height" multiplier="1:1" id="Dwt-zt-gAU"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="ovQ-zc-GIl" firstAttribute="top" secondItem="r6J-lY-z6X" secondAttribute="top" constant="11" id="489-jd-f5v"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="pgt-Px-Ckj" secondAttribute="trailing" constant="8" id="K1m-kM-awg"/>
+                                                        <constraint firstItem="pgt-Px-Ckj" firstAttribute="leading" secondItem="ovQ-zc-GIl" secondAttribute="trailing" constant="8" id="WOV-Re-YYC"/>
+                                                        <constraint firstItem="pgt-Px-Ckj" firstAttribute="centerY" secondItem="ovQ-zc-GIl" secondAttribute="centerY" id="gcZ-5G-noj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ovQ-zc-GIl" secondAttribute="bottom" constant="11" id="iX2-Ib-HqM"/>
+                                                        <constraint firstItem="ovQ-zc-GIl" firstAttribute="leading" secondItem="r6J-lY-z6X" secondAttribute="leading" id="y7Q-vA-vbZ"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="titleLbl" destination="pgt-Px-Ckj" id="VGC-G7-C67"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="9SS-vh-MzO" id="bm6-K4-XMx"/>
+                                            <outlet property="delegate" destination="9SS-vh-MzO" id="Kkx-bR-t5u"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dFA-WY-rrE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KUW-Wy-HvX" firstAttribute="leading" secondItem="dFA-WY-rrE" secondAttribute="leading" constant="16" id="Dyh-Vj-5Lb"/>
+                            <constraint firstAttribute="bottom" secondItem="KUW-Wy-HvX" secondAttribute="bottom" id="EvB-RG-aiN"/>
+                            <constraint firstItem="KUW-Wy-HvX" firstAttribute="top" secondItem="dFA-WY-rrE" secondAttribute="top" id="TpQ-KR-dU7"/>
+                            <constraint firstItem="KUW-Wy-HvX" firstAttribute="trailing" secondItem="dFA-WY-rrE" secondAttribute="trailing" constant="-16" id="tMD-C1-lav"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R14-sz-sZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="795.38461538461536" y="2.8436018957345972"/>
+        </scene>
+        <!--Insurance Program Controller-->
+        <scene sceneID="NQ3-Oz-G9a">
+            <objects>
+                <viewController storyboardIdentifier="InsuranceProgramVC" id="AgM-Mj-bgc" customClass="InsuranceProgramController" customModule="AskoMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5g7-Iv-Wlo">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l5Q-Bl-sRZ">
+                                <rect key="frame" x="0.0" y="47" width="390" height="797"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="insuranceProgramCell" id="aK6-Vb-pOa" customClass="InsuranceProgramCell" customModule="AskoMed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="68.333335876464844"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aK6-Vb-pOa" id="Pxz-wL-33j">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="68.333335876464844"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ct4-os-Ech">
+                                                    <rect key="frame" x="20.000000000000004" y="22" width="38.333333333333343" height="24.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="nif-XE-0tc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ct4-os-Ech" secondAttribute="bottom" constant="11" id="FSK-7E-eGI"/>
+                                                <constraint firstItem="Ct4-os-Ech" firstAttribute="top" secondItem="Pxz-wL-33j" secondAttribute="topMargin" constant="11" id="Yd5-ug-jAJ"/>
+                                                <constraint firstItem="Ct4-os-Ech" firstAttribute="leading" secondItem="Pxz-wL-33j" secondAttribute="leadingMargin" id="k3s-wP-kUz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLbl" destination="Ct4-os-Ech" id="HHA-Ol-DA9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="AgM-Mj-bgc" id="ZUu-1J-Ow3"/>
+                                    <outlet property="delegate" destination="AgM-Mj-bgc" id="Vbm-e1-AzK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I6d-2o-4Xd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l5Q-Bl-sRZ" firstAttribute="leading" secondItem="I6d-2o-4Xd" secondAttribute="leading" id="CoV-rc-vjs"/>
+                            <constraint firstItem="l5Q-Bl-sRZ" firstAttribute="trailing" secondItem="I6d-2o-4Xd" secondAttribute="trailing" id="EdS-fk-Vgz"/>
+                            <constraint firstAttribute="bottom" secondItem="l5Q-Bl-sRZ" secondAttribute="bottom" id="LJe-Oz-7fs"/>
+                            <constraint firstItem="l5Q-Bl-sRZ" firstAttribute="top" secondItem="I6d-2o-4Xd" secondAttribute="top" id="Trq-VE-Rcw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVQ-Om-nNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530.7692307692307" y="2.8436018957345972"/>
+        </scene>
+        <!--Paper Insurance Controller-->
+        <scene sceneID="M2N-2w-v2V">
+            <objects>
+                <viewController storyboardIdentifier="paperInsVC" id="0lI-Gs-KCl" customClass="PaperInsuranceController" customModule="AskoMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HeM-Po-rfi">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="prf-1e-KBF">
+                                <rect key="frame" x="16" y="47" width="358" height="763"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавление бумажной иммунокарты" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INf-Oc-cAK">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="qA4-qf-67C"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="246" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zpd-9S-CeK">
+                                        <rect key="frame" x="0.0" y="63" width="358" height="700"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="paperInsCell" id="8D2-Nt-cPj" customClass="PaperInsuranceCell" customModule="AskoMed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="358" height="246"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8D2-Nt-cPj" id="TCV-J9-hXp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="246"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oy4-Pv-nHx">
+                                                            <rect key="frame" x="0.0" y="6" width="358" height="234"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о страховании" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yw-K6-rSQ">
+                                                                    <rect key="frame" x="16.000000000000014" y="16" width="226.33333333333337" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="sHe-aI-eVo"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="хх-ххх" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDn-8o-Pux" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="80" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="WhX-02-iOx"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Серия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ho-Hs-t7l">
+                                                                    <rect key="frame" x="16" y="56" width="40" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="6Er-D4-Dvn"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                                                                    <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYB-C9-ReK">
+                                                                    <rect key="frame" x="15.999999999999996" y="146" width="42.666666666666657" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="KX5-vD-Ijn"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                                                                    <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="№ххххххх" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrS-b7-tIw" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="170" width="326" height="48"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="dev-qD-iLx"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="XDn-8o-Pux" firstAttribute="leading" secondItem="Oy4-Pv-nHx" secondAttribute="leading" constant="16" id="3oQ-YU-gJK"/>
+                                                                <constraint firstItem="mYB-C9-ReK" firstAttribute="top" secondItem="XDn-8o-Pux" secondAttribute="bottom" constant="16" id="A1U-jw-UPC"/>
+                                                                <constraint firstAttribute="trailing" secondItem="LrS-b7-tIw" secondAttribute="trailing" constant="16" id="FAP-LI-mo7"/>
+                                                                <constraint firstItem="mYB-C9-ReK" firstAttribute="leading" secondItem="Oy4-Pv-nHx" secondAttribute="leading" constant="16" id="GmY-d1-pKi"/>
+                                                                <constraint firstItem="XDn-8o-Pux" firstAttribute="top" secondItem="3ho-Hs-t7l" secondAttribute="bottom" constant="4" id="KhQ-p2-azw"/>
+                                                                <constraint firstItem="LrS-b7-tIw" firstAttribute="leading" secondItem="Oy4-Pv-nHx" secondAttribute="leading" constant="16" id="OJ8-Su-AEh"/>
+                                                                <constraint firstItem="4Yw-K6-rSQ" firstAttribute="top" secondItem="Oy4-Pv-nHx" secondAttribute="top" constant="16" id="Qon-Dp-FWP"/>
+                                                                <constraint firstAttribute="trailing" secondItem="XDn-8o-Pux" secondAttribute="trailing" constant="16" id="SDM-LI-w5g"/>
+                                                                <constraint firstItem="LrS-b7-tIw" firstAttribute="top" secondItem="mYB-C9-ReK" secondAttribute="bottom" constant="4" id="Xl5-jM-bYg"/>
+                                                                <constraint firstItem="3ho-Hs-t7l" firstAttribute="leading" secondItem="Oy4-Pv-nHx" secondAttribute="leading" constant="16" id="ewy-t7-qYj"/>
+                                                                <constraint firstItem="4Yw-K6-rSQ" firstAttribute="leading" secondItem="Oy4-Pv-nHx" secondAttribute="leading" constant="16" id="gDs-Sl-yRr"/>
+                                                                <constraint firstAttribute="bottom" secondItem="LrS-b7-tIw" secondAttribute="bottom" constant="16" id="ldl-gv-Ra3"/>
+                                                                <constraint firstItem="3ho-Hs-t7l" firstAttribute="top" secondItem="4Yw-K6-rSQ" secondAttribute="bottom" constant="20" id="rcB-Q2-RSM"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Oy4-Pv-nHx" secondAttribute="bottom" constant="6" id="1yX-Wf-x1D"/>
+                                                        <constraint firstItem="Oy4-Pv-nHx" firstAttribute="top" secondItem="TCV-J9-hXp" secondAttribute="top" constant="6" id="LUL-nl-jHg"/>
+                                                        <constraint firstItem="Oy4-Pv-nHx" firstAttribute="leading" secondItem="TCV-J9-hXp" secondAttribute="leading" id="P2J-2K-TKD"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Oy4-Pv-nHx" secondAttribute="trailing" id="aeE-W2-gIb"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="backView" destination="Oy4-Pv-nHx" id="xUP-eo-egc"/>
+                                                    <outlet property="numberField" destination="LrS-b7-tIw" id="Fyk-rf-5q7"/>
+                                                    <outlet property="seriesField" destination="XDn-8o-Pux" id="v16-ZF-51d"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="0lI-Gs-KCl" id="lSx-rW-PFz"/>
+                                            <outlet property="delegate" destination="0lI-Gs-KCl" id="HdM-04-O1K"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MO-c1-v7C">
+                                <rect key="frame" x="16" y="748" width="358" height="50"/>
+                                <color key="backgroundColor" red="0.047058823529411764" green="0.68627450980392157" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="r3F-TA-imO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Добавить"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chooseInsurance:" destination="0lI-Gs-KCl" eventType="touchUpInside" id="Ajm-ib-Yl4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2tr-Y3-x8T"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="prf-1e-KBF" secondAttribute="trailing" constant="16" id="9oR-MB-3lr"/>
+                            <constraint firstItem="prf-1e-KBF" firstAttribute="top" secondItem="2tr-Y3-x8T" secondAttribute="top" id="FK2-PU-5Ii"/>
+                            <constraint firstItem="2tr-Y3-x8T" firstAttribute="bottom" secondItem="9MO-c1-v7C" secondAttribute="bottom" constant="12" id="Xtn-qL-AXv"/>
+                            <constraint firstItem="prf-1e-KBF" firstAttribute="leading" secondItem="2tr-Y3-x8T" secondAttribute="leading" constant="16" id="crE-gP-MHh"/>
+                            <constraint firstItem="9MO-c1-v7C" firstAttribute="leading" secondItem="2tr-Y3-x8T" secondAttribute="leading" constant="16" id="fDk-4H-deq"/>
+                            <constraint firstItem="2tr-Y3-x8T" firstAttribute="bottom" secondItem="prf-1e-KBF" secondAttribute="bottom" id="l36-Ql-tpm"/>
+                            <constraint firstItem="2tr-Y3-x8T" firstAttribute="trailing" secondItem="9MO-c1-v7C" secondAttribute="trailing" constant="16" id="mrx-Xb-iFD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="zpd-9S-CeK" id="u5k-QQ-yTP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9o-k4-ItE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="685"/>
+        </scene>
+        <!--Paper Police Controller-->
+        <scene sceneID="JAd-3h-Aa8">
+            <objects>
+                <viewController storyboardIdentifier="newPaperPoliceVC" id="jvl-Hh-sAk" customClass="PaperPoliceController" customModule="AskoMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kgO-T8-KJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Wlo-4u-sTC">
+                                <rect key="frame" x="16" y="47" width="358" height="797"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавление бумажной иммунокарты" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnR-wO-ZT7">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="9Pk-5M-5Um"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="246" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2aW-8u-pJx">
+                                        <rect key="frame" x="0.0" y="84" width="358" height="713"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="personInfoCell" rowHeight="258" id="hhV-Pe-8cZ" customClass="PaperPoliceCell" customModule="AskoMed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="358" height="258"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hhV-Pe-8cZ" id="wPv-nl-iN3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="258"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y44-RP-gWI">
+                                                            <rect key="frame" x="0.0" y="6" width="358" height="246"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о застрахованном" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8B-h6-A50">
+                                                                    <rect key="frame" x="16" y="16" width="326" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ФИО" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wfw-rw-psO" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="56" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="a9g-nf-xm8"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Дата рождения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qNf-Be-Jun" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="118" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="fDS-5v-9Js"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Телефон" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-jv-QZX" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="180" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="nL1-LW-hN5"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="Wfw-rw-psO" firstAttribute="top" secondItem="M8B-h6-A50" secondAttribute="bottom" constant="20" id="4yV-R2-zOF"/>
+                                                                <constraint firstItem="Wfw-rw-psO" firstAttribute="leading" secondItem="y44-RP-gWI" secondAttribute="leading" constant="16" id="As7-QO-cbt"/>
+                                                                <constraint firstItem="qNf-Be-Jun" firstAttribute="leading" secondItem="y44-RP-gWI" secondAttribute="leading" constant="16" id="IcH-HD-aYR"/>
+                                                                <constraint firstItem="M8B-h6-A50" firstAttribute="top" secondItem="y44-RP-gWI" secondAttribute="top" constant="16" id="Mvd-nB-4PD"/>
+                                                                <constraint firstAttribute="trailing" secondItem="qNf-Be-Jun" secondAttribute="trailing" constant="16" id="QT0-pk-1k0"/>
+                                                                <constraint firstItem="n8B-jv-QZX" firstAttribute="leading" secondItem="y44-RP-gWI" secondAttribute="leading" constant="16" id="Sgp-68-z9D"/>
+                                                                <constraint firstItem="n8B-jv-QZX" firstAttribute="top" secondItem="qNf-Be-Jun" secondAttribute="bottom" constant="12" id="bLK-SL-4WM"/>
+                                                                <constraint firstAttribute="bottom" secondItem="n8B-jv-QZX" secondAttribute="bottom" constant="16" id="dEW-OX-WDf"/>
+                                                                <constraint firstItem="qNf-Be-Jun" firstAttribute="top" secondItem="Wfw-rw-psO" secondAttribute="bottom" constant="12" id="dYr-g6-cE6"/>
+                                                                <constraint firstAttribute="trailing" secondItem="n8B-jv-QZX" secondAttribute="trailing" constant="16" id="h2n-iy-W72"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Wfw-rw-psO" secondAttribute="trailing" constant="16" id="stm-8B-TpL"/>
+                                                                <constraint firstItem="M8B-h6-A50" firstAttribute="leading" secondItem="y44-RP-gWI" secondAttribute="leading" constant="16" id="wWu-HN-eqc"/>
+                                                                <constraint firstAttribute="trailing" secondItem="M8B-h6-A50" secondAttribute="trailing" constant="16" id="zM8-BW-c3D"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="y44-RP-gWI" secondAttribute="trailing" id="1x1-GF-QJH"/>
+                                                        <constraint firstItem="y44-RP-gWI" firstAttribute="leading" secondItem="wPv-nl-iN3" secondAttribute="leading" id="5E6-Mn-CJG"/>
+                                                        <constraint firstItem="y44-RP-gWI" firstAttribute="top" secondItem="wPv-nl-iN3" secondAttribute="top" constant="6" id="Aht-Z0-Afs"/>
+                                                        <constraint firstAttribute="bottom" secondItem="y44-RP-gWI" secondAttribute="bottom" constant="6" id="x2F-z4-r5q"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="backView" destination="y44-RP-gWI" id="cr7-Ej-dbT"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="insuranceInfoCell" rowHeight="410" id="zDH-Cb-FrI" customClass="PaperPoliceCell" customModule="AskoMed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="308" width="358" height="410"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zDH-Cb-FrI" id="avx-8f-9wq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="410"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGU-XZ-PLl">
+                                                            <rect key="frame" x="0.0" y="6" width="358" height="398"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о страховании" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJe-kW-Us9">
+                                                                    <rect key="frame" x="16" y="16" width="326" height="19.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Согласие" placeholder="Страховая программа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dmB-IL-qTa" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="55.666666666666657" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="E6R-kl-fb2"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="74-459" placeholder="Номер полиса" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lxV-s8-idj" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="179.66666666666666" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="lje-7t-BTI"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Антиклещ" placeholder="Номер полиса" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Psk-Ze-Zps" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="117.66666666666669" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="T0U-FN-2Wd"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="От" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gr4-Wh-KdG" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="340" width="146" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="Gu4-bX-FCK"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fz-Ck-4Ts">
+                                                                    <rect key="frame" x="170" y="364" width="15" height="2"/>
+                                                                    <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="2" id="Dj9-PS-dhV"/>
+                                                                        <constraint firstAttribute="width" constant="15" id="qpz-i9-sMY"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="До" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oId-kO-3fm" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="193" y="340" width="146" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="H38-8N-R4A"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Срок действия иммунокарты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KH-aS-NuH">
+                                                                    <rect key="frame" x="16" y="311.66666666666669" width="326" height="20.333333333333314"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0066241" placeholder="Номер полиса" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVN-it-ARW" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="241.66666666666663" width="326" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="ccg-dD-fIJ"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="oId-kO-3fm" firstAttribute="width" secondItem="gr4-Wh-KdG" secondAttribute="width" id="4kU-F4-a2A"/>
+                                                                <constraint firstAttribute="trailing" secondItem="dmB-IL-qTa" secondAttribute="trailing" constant="16" id="4mA-xn-ggg"/>
+                                                                <constraint firstItem="oId-kO-3fm" firstAttribute="leading" secondItem="6Fz-Ck-4Ts" secondAttribute="trailing" constant="8" id="7no-UP-IgO"/>
+                                                                <constraint firstAttribute="bottom" secondItem="gr4-Wh-KdG" secondAttribute="bottom" constant="8" id="95V-Rx-C8j"/>
+                                                                <constraint firstItem="6Fz-Ck-4Ts" firstAttribute="centerY" secondItem="oId-kO-3fm" secondAttribute="centerY" id="A6p-we-uea"/>
+                                                                <constraint firstItem="VJe-kW-Us9" firstAttribute="leading" secondItem="wGU-XZ-PLl" secondAttribute="leading" constant="16" id="BwD-pB-Rbd"/>
+                                                                <constraint firstAttribute="trailing" secondItem="lxV-s8-idj" secondAttribute="trailing" constant="16" id="Hpr-en-RNd"/>
+                                                                <constraint firstItem="KVN-it-ARW" firstAttribute="leading" secondItem="wGU-XZ-PLl" secondAttribute="leading" constant="16" id="L1w-rc-Q9A"/>
+                                                                <constraint firstItem="lxV-s8-idj" firstAttribute="leading" secondItem="wGU-XZ-PLl" secondAttribute="leading" constant="16" id="LI2-gT-Rms"/>
+                                                                <constraint firstItem="dmB-IL-qTa" firstAttribute="leading" secondItem="wGU-XZ-PLl" secondAttribute="leading" constant="16" id="PFJ-ps-4ls"/>
+                                                                <constraint firstAttribute="trailing" secondItem="VJe-kW-Us9" secondAttribute="trailing" constant="16" id="R7G-QP-4ou"/>
+                                                                <constraint firstItem="5KH-aS-NuH" firstAttribute="top" secondItem="KVN-it-ARW" secondAttribute="bottom" constant="20" id="Rph-dr-H2C"/>
+                                                                <constraint firstItem="Psk-Ze-Zps" firstAttribute="leading" secondItem="wGU-XZ-PLl" secondAttribute="leading" constant="16" id="USo-Yi-pXA"/>
+                                                                <constraint firstItem="lxV-s8-idj" firstAttribute="top" secondItem="Psk-Ze-Zps" secondAttribute="bottom" constant="12" id="UuW-ug-qeo"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Psk-Ze-Zps" secondAttribute="trailing" constant="16" id="VFx-Oe-6yF"/>
+                                                                <constraint firstItem="gr4-Wh-KdG" firstAttribute="leading" secondItem="wGU-XZ-PLl" secondAttribute="leading" constant="16" id="WVb-xj-Rhq"/>
+                                                                <constraint firstItem="gr4-Wh-KdG" firstAttribute="width" secondItem="wGU-XZ-PLl" secondAttribute="width" multiplier="0.408" id="YYn-RA-hj1"/>
+                                                                <constraint firstAttribute="trailing" secondItem="KVN-it-ARW" secondAttribute="trailing" constant="16" id="aIJ-jY-USg"/>
+                                                                <constraint firstItem="5KH-aS-NuH" firstAttribute="leading" secondItem="wGU-XZ-PLl" secondAttribute="leading" constant="16" id="aXN-PI-tLt"/>
+                                                                <constraint firstItem="gr4-Wh-KdG" firstAttribute="top" secondItem="5KH-aS-NuH" secondAttribute="bottom" constant="8" symbolic="YES" id="aoz-aU-pBm"/>
+                                                                <constraint firstItem="6Fz-Ck-4Ts" firstAttribute="centerY" secondItem="gr4-Wh-KdG" secondAttribute="centerY" id="d01-Bi-WIo"/>
+                                                                <constraint firstItem="dmB-IL-qTa" firstAttribute="top" secondItem="VJe-kW-Us9" secondAttribute="bottom" constant="20" id="hF1-Uw-AMa"/>
+                                                                <constraint firstItem="KVN-it-ARW" firstAttribute="top" secondItem="lxV-s8-idj" secondAttribute="bottom" constant="12" id="jsf-l7-cki"/>
+                                                                <constraint firstItem="Psk-Ze-Zps" firstAttribute="top" secondItem="dmB-IL-qTa" secondAttribute="bottom" constant="12" id="jvz-c5-1Kb"/>
+                                                                <constraint firstItem="6Fz-Ck-4Ts" firstAttribute="leading" secondItem="gr4-Wh-KdG" secondAttribute="trailing" constant="8" id="phQ-at-IRf"/>
+                                                                <constraint firstAttribute="trailing" secondItem="5KH-aS-NuH" secondAttribute="trailing" constant="16" id="xf2-a1-LVw"/>
+                                                                <constraint firstItem="VJe-kW-Us9" firstAttribute="top" secondItem="wGU-XZ-PLl" secondAttribute="top" constant="16" id="xgv-gl-fZk"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="wGU-XZ-PLl" firstAttribute="top" secondItem="avx-8f-9wq" secondAttribute="top" constant="6" id="5dS-qX-Gjw"/>
+                                                        <constraint firstItem="wGU-XZ-PLl" firstAttribute="leading" secondItem="avx-8f-9wq" secondAttribute="leading" id="71k-gH-ykj"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wGU-XZ-PLl" secondAttribute="trailing" id="Kyc-Kh-jJw"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wGU-XZ-PLl" secondAttribute="bottom" constant="6" id="Mn2-XM-glL"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="backView" destination="wGU-XZ-PLl" id="ide-xt-3di"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="attachPhotoCell" rowHeight="244" id="EgE-wz-MCY" customClass="PaperPoliceCell" customModule="AskoMed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="718" width="358" height="244"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EgE-wz-MCY" id="9k5-29-Y5n">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="244"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnb-Dg-vb6">
+                                                            <rect key="frame" x="0.0" y="6" width="358" height="232"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attachImage" translatesAutoresizingMaskIntoConstraints="NO" id="CZa-Hj-E3o">
+                                                                    <rect key="frame" x="16" y="16" width="84" height="84"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="84" id="GrG-Qy-Q6b"/>
+                                                                        <constraint firstAttribute="width" constant="84" id="i82-Kq-dfw"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attachImage" translatesAutoresizingMaskIntoConstraints="NO" id="3nF-1f-oQN">
+                                                                    <rect key="frame" x="16" y="133" width="84" height="83"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="84" id="rct-Nm-l29"/>
+                                                                        <constraint firstAttribute="height" constant="84" id="u42-pv-BFa"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Бумажная иммунокарта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGK-TF-VaK">
+                                                                    <rect key="frame" x="116" y="36" width="226" height="18.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страница 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lq-Da-hNo">
+                                                                    <rect key="frame" x="116" y="58.333333333333329" width="78" height="17"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                    <color key="textColor" red="0.56862745100000001" green="0.57647058819999997" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5f-lI-ciP">
+                                                                    <rect key="frame" x="16" y="116" width="326" height="1"/>
+                                                                    <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="8As-gr-h5g"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страница 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ew-T0-x61">
+                                                                    <rect key="frame" x="116" y="177.33333333333334" width="80" height="17"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                    <color key="textColor" red="0.56862745100000001" green="0.57647058819999997" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Бумажная иммунокарта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzu-h1-CmE">
+                                                                    <rect key="frame" x="116" y="155" width="226" height="18.333333333333343"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="RGK-TF-VaK" firstAttribute="top" secondItem="Pnb-Dg-vb6" secondAttribute="top" constant="36" id="10e-WZ-U8M"/>
+                                                                <constraint firstAttribute="bottom" secondItem="3nF-1f-oQN" secondAttribute="bottom" constant="16" id="3np-Qz-Fix"/>
+                                                                <constraint firstItem="0Ew-T0-x61" firstAttribute="leading" secondItem="3nF-1f-oQN" secondAttribute="trailing" constant="16" id="484-y3-Gzh"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Xzu-h1-CmE" secondAttribute="trailing" constant="16" id="56i-L2-Raf"/>
+                                                                <constraint firstItem="RGK-TF-VaK" firstAttribute="leading" secondItem="CZa-Hj-E3o" secondAttribute="trailing" constant="16" id="69S-SL-I1e"/>
+                                                                <constraint firstItem="O5f-lI-ciP" firstAttribute="leading" secondItem="Pnb-Dg-vb6" secondAttribute="leading" constant="16" id="8zM-zf-XaY"/>
+                                                                <constraint firstItem="CZa-Hj-E3o" firstAttribute="leading" secondItem="Pnb-Dg-vb6" secondAttribute="leading" constant="16" id="Ej4-K4-PJh"/>
+                                                                <constraint firstItem="0Ew-T0-x61" firstAttribute="top" secondItem="Xzu-h1-CmE" secondAttribute="bottom" constant="4" id="LMd-xb-CBx"/>
+                                                                <constraint firstItem="CZa-Hj-E3o" firstAttribute="top" secondItem="Pnb-Dg-vb6" secondAttribute="top" constant="16" id="T6P-az-HzS"/>
+                                                                <constraint firstAttribute="trailing" secondItem="O5f-lI-ciP" secondAttribute="trailing" constant="16" id="UnX-TZ-VBA"/>
+                                                                <constraint firstItem="Xzu-h1-CmE" firstAttribute="leading" secondItem="3nF-1f-oQN" secondAttribute="trailing" constant="16" id="b7j-6z-PGt"/>
+                                                                <constraint firstItem="3nF-1f-oQN" firstAttribute="top" secondItem="O5f-lI-ciP" secondAttribute="bottom" constant="16" id="eo6-BS-Vjg"/>
+                                                                <constraint firstAttribute="trailing" secondItem="RGK-TF-VaK" secondAttribute="trailing" constant="16" id="hd7-Ks-bkw"/>
+                                                                <constraint firstItem="5lq-Da-hNo" firstAttribute="top" secondItem="RGK-TF-VaK" secondAttribute="bottom" constant="4" id="j3b-b7-qeu"/>
+                                                                <constraint firstItem="3nF-1f-oQN" firstAttribute="leading" secondItem="Pnb-Dg-vb6" secondAttribute="leading" constant="16" id="mH8-xd-1XS"/>
+                                                                <constraint firstItem="Xzu-h1-CmE" firstAttribute="top" secondItem="O5f-lI-ciP" secondAttribute="bottom" constant="38" id="qzx-Vu-wIH"/>
+                                                                <constraint firstItem="O5f-lI-ciP" firstAttribute="top" secondItem="CZa-Hj-E3o" secondAttribute="bottom" constant="16" id="wSJ-Wo-ZPo"/>
+                                                                <constraint firstItem="5lq-Da-hNo" firstAttribute="leading" secondItem="CZa-Hj-E3o" secondAttribute="trailing" constant="16" id="yvq-hJ-4z6"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Pnb-Dg-vb6" secondAttribute="trailing" id="Qi1-Tr-e7z"/>
+                                                        <constraint firstItem="Pnb-Dg-vb6" firstAttribute="top" secondItem="9k5-29-Y5n" secondAttribute="top" constant="6" id="Y2Y-Dh-Udz"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Pnb-Dg-vb6" secondAttribute="bottom" constant="6" id="b6Y-Hh-s5h"/>
+                                                        <constraint firstItem="Pnb-Dg-vb6" firstAttribute="leading" secondItem="9k5-29-Y5n" secondAttribute="leading" id="jzR-7J-d8n"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="backView" destination="Pnb-Dg-vb6" id="B9d-lB-yJH"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="jvl-Hh-sAk" id="NB9-4J-i5d"/>
+                                            <outlet property="delegate" destination="jvl-Hh-sAk" id="f3i-gO-qFY"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hld-Ax-bXj">
+                                <rect key="frame" x="16" y="748" width="358" height="50"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.68627450980000004" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="x7v-ah-Gej"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Добавить"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createPolice:" destination="jvl-Hh-sAk" eventType="touchUpInside" id="DwY-Xt-98M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JxI-vz-yTL"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wlo-4u-sTC" firstAttribute="trailing" secondItem="JxI-vz-yTL" secondAttribute="trailing" constant="-16" id="4QB-L8-WFh"/>
+                            <constraint firstItem="Wlo-4u-sTC" firstAttribute="top" secondItem="JxI-vz-yTL" secondAttribute="top" id="4p1-I7-NCn"/>
+                            <constraint firstItem="Wlo-4u-sTC" firstAttribute="leading" secondItem="JxI-vz-yTL" secondAttribute="leading" constant="16" id="QfR-f4-6vS"/>
+                            <constraint firstItem="JxI-vz-yTL" firstAttribute="bottom" secondItem="Hld-Ax-bXj" secondAttribute="bottom" constant="12" id="ax7-Ic-F64"/>
+                            <constraint firstItem="JxI-vz-yTL" firstAttribute="trailing" secondItem="Hld-Ax-bXj" secondAttribute="trailing" constant="16" id="hkF-BD-hKO"/>
+                            <constraint firstAttribute="bottom" secondItem="Wlo-4u-sTC" secondAttribute="bottom" id="jOu-2B-VdX"/>
+                            <constraint firstItem="Hld-Ax-bXj" firstAttribute="leading" secondItem="JxI-vz-yTL" secondAttribute="leading" constant="16" id="vVC-Mw-9mq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="2aW-8u-pJx" id="2Zr-XE-UB2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dap-vL-xWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531" y="685"/>
+        </scene>
+        <!--Camera Controller-->
+        <scene sceneID="R9v-Un-8BM">
+            <objects>
+                <viewController storyboardIdentifier="cameraVC" id="omm-U5-CLB" customClass="CameraController" customModule="AskoMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NI6-ha-chX">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Stc-Wa-8eT">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49P-iO-ISS">
+                                <rect key="frame" x="0.0" y="713.33333333333337" width="390" height="130.66666666666663"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8S-Gr-34W">
+                                        <rect key="frame" x="159" y="16" width="72" height="72"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="photoBtn"/>
+                                        <connections>
+                                            <action selector="didTakePhoto:" destination="omm-U5-CLB" eventType="touchUpInside" id="pnY-sM-Q4T"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CX8-h6-zNg">
+                                        <rect key="frame" x="16" y="16.000000000000007" width="70" height="98.666666666666686"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="DG2-7R-5Pl"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="t8S-Gr-34W" firstAttribute="centerX" secondItem="49P-iO-ISS" secondAttribute="centerX" id="3L9-Sj-xLQ"/>
+                                    <constraint firstItem="CX8-h6-zNg" firstAttribute="leading" secondItem="49P-iO-ISS" secondAttribute="leading" constant="16" id="47r-NX-1tf"/>
+                                    <constraint firstAttribute="bottom" secondItem="CX8-h6-zNg" secondAttribute="bottom" constant="16" id="GdB-sD-jmu"/>
+                                    <constraint firstItem="t8S-Gr-34W" firstAttribute="top" secondItem="49P-iO-ISS" secondAttribute="top" constant="16" id="QVS-8G-Mrr"/>
+                                    <constraint firstItem="CX8-h6-zNg" firstAttribute="top" secondItem="49P-iO-ISS" secondAttribute="top" constant="16" id="cmW-c3-iWj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hjs-Tj-XHH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Stc-Wa-8eT" firstAttribute="top" secondItem="NI6-ha-chX" secondAttribute="top" id="Lof-P9-kIx"/>
+                            <constraint firstAttribute="bottom" secondItem="49P-iO-ISS" secondAttribute="bottom" id="MAK-PL-Kns"/>
+                            <constraint firstItem="49P-iO-ISS" firstAttribute="leading" secondItem="hjs-Tj-XHH" secondAttribute="leading" id="Pec-UJ-7sZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Stc-Wa-8eT" secondAttribute="bottom" id="YXh-NF-wjL"/>
+                            <constraint firstItem="Stc-Wa-8eT" firstAttribute="leading" secondItem="hjs-Tj-XHH" secondAttribute="leading" id="Ymz-ss-Txg"/>
+                            <constraint firstItem="hjs-Tj-XHH" firstAttribute="trailing" secondItem="Stc-Wa-8eT" secondAttribute="trailing" id="j9t-nY-wjb"/>
+                            <constraint firstItem="hjs-Tj-XHH" firstAttribute="trailing" secondItem="49P-iO-ISS" secondAttribute="trailing" id="vuq-Co-xAz"/>
+                            <constraint firstItem="49P-iO-ISS" firstAttribute="height" secondItem="NI6-ha-chX" secondAttribute="height" multiplier="0.155" id="wHf-ly-1Iu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captureImageView" destination="CX8-h6-zNg" id="U8Z-mg-xFS"/>
+                        <outlet property="previewView" destination="Stc-Wa-8eT" id="rgd-gp-G1o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeA-x6-D6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2364.6153846153848" y="684.59715639810429"/>
+        </scene>
+        <!--Paper Insurance Info Controller-->
+        <scene sceneID="Xxe-jA-f18">
+            <objects>
+                <viewController storyboardIdentifier="insInfoVC" id="aM6-or-1Zt" customClass="PaperInsuranceInfoController" customModule="AskoMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lu1-ir-Gj9">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="sfS-Le-0RF">
+                                <rect key="frame" x="16" y="47" width="358" height="763"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подтвердите страховую компанию" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRl-Jz-uC4">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="w75-Gn-Ggu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="246" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jhd-R1-7Ov">
+                                        <rect key="frame" x="0.0" y="63" width="358" height="700"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="infoCell" rowHeight="72" id="MKe-ar-9Cq" customClass="PaperInfoCell" customModule="AskoMed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="358" height="72"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKe-ar-9Cq" id="KTU-t8-f5A">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="72"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxd-in-mOV">
+                                                            <rect key="frame" x="0.0" y="6" width="358" height="60"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Согласие" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bU-ij-aZm">
+                                                                    <rect key="frame" x="16" y="16" width="76.333333333333329" height="28"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="Yd7-2x-5TQ"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soglasieIcon" translatesAutoresizingMaskIntoConstraints="NO" id="sgo-5O-xzv">
+                                                                    <rect key="frame" x="248" y="20" width="94" height="20"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="sgo-5O-xzv" firstAttribute="centerY" secondItem="3bU-ij-aZm" secondAttribute="centerY" id="3Il-Eq-8bO"/>
+                                                                <constraint firstItem="3bU-ij-aZm" firstAttribute="top" secondItem="hxd-in-mOV" secondAttribute="top" constant="16" id="AWD-uj-c38"/>
+                                                                <constraint firstItem="3bU-ij-aZm" firstAttribute="leading" secondItem="hxd-in-mOV" secondAttribute="leading" constant="16" id="Elb-ip-g01"/>
+                                                                <constraint firstAttribute="trailing" secondItem="sgo-5O-xzv" secondAttribute="trailing" constant="16" id="FxO-Rm-lad"/>
+                                                                <constraint firstAttribute="bottom" secondItem="3bU-ij-aZm" secondAttribute="bottom" constant="16" id="k0K-gG-xUn"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="hxd-in-mOV" secondAttribute="trailing" id="OyB-6n-Fwp"/>
+                                                        <constraint firstItem="hxd-in-mOV" firstAttribute="top" secondItem="KTU-t8-f5A" secondAttribute="top" constant="6" id="agE-SV-lqQ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="hxd-in-mOV" secondAttribute="bottom" constant="6" id="dVu-wo-vRu"/>
+                                                        <constraint firstItem="hxd-in-mOV" firstAttribute="leading" secondItem="KTU-t8-f5A" secondAttribute="leading" id="heU-I3-sL7"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="backView" destination="hxd-in-mOV" id="SaZ-bs-aQc"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="phoneCell" rowHeight="132" id="QJe-fT-cOu" customClass="PaperInfoCell" customModule="AskoMed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="122" width="358" height="132"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QJe-fT-cOu" id="3Jr-Tn-59B">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="132"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGB-51-Il3">
+                                                            <rect key="frame" x="0.0" y="6" width="358" height="120"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не та страховая компания?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vng-bE-Xct">
+                                                                    <rect key="frame" x="16" y="16" width="326" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="fgh-lA-fNv"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a43-Y9-lcR">
+                                                                    <rect key="frame" x="16" y="44" width="326" height="60"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="Если застрахованный относится к другой СК, обратитесь в колл-центр АСКО-МЕД  по телефону: ">
+                                                                            <attributes>
+                                                                                <font key="NSFont" metaFont="system"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                        <fragment content="8 800 70 70 594">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.3411764705882353" green="0.44705882352941173" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <font key="NSFont" metaFont="system"/>
+                                                                                <real key="NSKern" value="0.0"/>
+                                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="a43-Y9-lcR" secondAttribute="trailing" constant="16" id="2lq-3I-Ov5"/>
+                                                                <constraint firstItem="vng-bE-Xct" firstAttribute="leading" secondItem="RGB-51-Il3" secondAttribute="leading" constant="16" id="Icz-V0-0Le"/>
+                                                                <constraint firstItem="a43-Y9-lcR" firstAttribute="leading" secondItem="RGB-51-Il3" secondAttribute="leading" constant="16" id="ON3-tX-m9I"/>
+                                                                <constraint firstItem="a43-Y9-lcR" firstAttribute="top" secondItem="vng-bE-Xct" secondAttribute="bottom" constant="8" symbolic="YES" id="XZ3-IR-YW0"/>
+                                                                <constraint firstAttribute="bottom" secondItem="a43-Y9-lcR" secondAttribute="bottom" constant="16" id="hRq-s5-nQy"/>
+                                                                <constraint firstItem="vng-bE-Xct" firstAttribute="top" secondItem="RGB-51-Il3" secondAttribute="top" constant="16" id="xfl-jf-WFm"/>
+                                                                <constraint firstAttribute="trailing" secondItem="vng-bE-Xct" secondAttribute="trailing" constant="16" id="yHq-od-yso"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="RGB-51-Il3" secondAttribute="trailing" id="5NE-mM-Gt0"/>
+                                                        <constraint firstItem="RGB-51-Il3" firstAttribute="top" secondItem="3Jr-Tn-59B" secondAttribute="top" constant="6" id="aA6-L8-46z"/>
+                                                        <constraint firstItem="RGB-51-Il3" firstAttribute="leading" secondItem="3Jr-Tn-59B" secondAttribute="leading" id="kHY-J4-h2l"/>
+                                                        <constraint firstAttribute="bottom" secondItem="RGB-51-Il3" secondAttribute="bottom" constant="6" id="vvh-rl-DaJ"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="backView" destination="RGB-51-Il3" id="UkD-TW-GO5"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="aM6-or-1Zt" id="QSf-I3-Vrz"/>
+                                            <outlet property="delegate" destination="aM6-or-1Zt" id="LMu-5c-IJ1"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prj-kf-nXh">
+                                <rect key="frame" x="16" y="748" width="358" height="50"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.68627450980000004" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fPz-Lt-6fj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Подтвердить"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="acceptInsurance:" destination="aM6-or-1Zt" eventType="touchUpInside" id="H23-UY-6Jh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QdL-bi-qKf"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sfS-Le-0RF" firstAttribute="top" secondItem="QdL-bi-qKf" secondAttribute="top" id="BuU-Zt-JYB"/>
+                            <constraint firstItem="Prj-kf-nXh" firstAttribute="leading" secondItem="QdL-bi-qKf" secondAttribute="leading" constant="16" id="G3D-6X-A2H"/>
+                            <constraint firstItem="QdL-bi-qKf" firstAttribute="bottom" secondItem="sfS-Le-0RF" secondAttribute="bottom" id="UWq-ek-rlp"/>
+                            <constraint firstItem="QdL-bi-qKf" firstAttribute="trailing" secondItem="Prj-kf-nXh" secondAttribute="trailing" constant="16" id="c1W-ha-sBf"/>
+                            <constraint firstItem="sfS-Le-0RF" firstAttribute="leading" secondItem="QdL-bi-qKf" secondAttribute="leading" constant="16" id="ibN-YX-Qeb"/>
+                            <constraint firstAttribute="trailing" secondItem="sfS-Le-0RF" secondAttribute="trailing" constant="16" id="kET-Ue-quh"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Prj-kf-nXh" secondAttribute="bottom" constant="12" id="ooE-md-UW6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="jhd-R1-7Ov" id="oHD-Ue-dnS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4M9-9g-KuF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="685"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Y5l-me-ace">
+            <objects>
+                <viewController id="L7o-vY-deV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K44-an-nKR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="XKL-bV-OfD">
+                                <rect key="frame" x="16" y="47" width="358" height="797"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Антиклещ Оптимум" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcA-2i-rOd">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="АльфаСтрахование" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQb-Jn-FkT">
+                                        <rect key="frame" x="0.0" y="50.666666666666671" width="358" height="18.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
+                                        <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="246" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qbr-dC-HRP">
+                                        <rect key="frame" x="0.0" y="93" width="358" height="704"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="A3C-8K-egr">
+                                                <rect key="frame" x="0.0" y="50" width="358" height="246"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A3C-8K-egr" id="SbF-Yq-tYh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="246"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ev6-zX-acw">
+                                                            <rect key="frame" x="0.0" y="8" width="358" height="230"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="ev6-zX-acw" secondAttribute="trailing" id="3O9-Ps-drW"/>
+                                                        <constraint firstItem="ev6-zX-acw" firstAttribute="leading" secondItem="SbF-Yq-tYh" secondAttribute="leading" id="6B4-HK-Q3I"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ev6-zX-acw" secondAttribute="bottom" constant="8" id="NQ0-p0-kea"/>
+                                                        <constraint firstItem="ev6-zX-acw" firstAttribute="top" secondItem="SbF-Yq-tYh" secondAttribute="top" constant="8" id="tGc-qx-RZ0"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="L7o-vY-deV" id="LBE-fC-MO1"/>
+                                            <outlet property="delegate" destination="L7o-vY-deV" id="MQI-N7-n96"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVc-dW-ewu">
+                                <rect key="frame" x="16" y="748" width="358" height="50"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.68627450980000004" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="coy-Ji-prU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Добавить"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createPolice:" destination="L7o-vY-deV" eventType="touchUpInside" id="gda-9q-VNY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hf3-Z4-8a4"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XKL-bV-OfD" firstAttribute="top" secondItem="hf3-Z4-8a4" secondAttribute="top" id="Bnj-pL-1XT"/>
+                            <constraint firstAttribute="bottom" secondItem="XKL-bV-OfD" secondAttribute="bottom" id="Ca7-Pi-PIQ"/>
+                            <constraint firstItem="hf3-Z4-8a4" firstAttribute="trailing" secondItem="CVc-dW-ewu" secondAttribute="trailing" constant="16" id="XvQ-Xo-T9f"/>
+                            <constraint firstItem="XKL-bV-OfD" firstAttribute="leading" secondItem="hf3-Z4-8a4" secondAttribute="leading" constant="16" id="a9m-A6-82u"/>
+                            <constraint firstItem="hf3-Z4-8a4" firstAttribute="bottom" secondItem="CVc-dW-ewu" secondAttribute="bottom" constant="12" id="i2n-dk-LCu"/>
+                            <constraint firstItem="XKL-bV-OfD" firstAttribute="trailing" secondItem="hf3-Z4-8a4" secondAttribute="trailing" constant="-16" id="kDX-BM-z6k"/>
+                            <constraint firstItem="CVc-dW-ewu" firstAttribute="leading" secondItem="hf3-Z4-8a4" secondAttribute="leading" constant="16" id="o3I-2x-xKY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="Qbr-dC-HRP" id="6dU-14-fHF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7PP-UZ-IDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3147.6923076923076" y="684.59715639810429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="attachImage" width="84" height="84"/>
+        <image name="insuranceIcon" width="24" height="24"/>
+        <image name="photoBtn" width="72" height="72"/>
+        <image name="soglasieIcon" width="94" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

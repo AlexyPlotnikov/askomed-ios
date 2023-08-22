@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-ExtraBold.ttf">
+            <string>Inter-ExtraBold</string>
+        </array>
+        <array key="Inter-Medium.ttf">
+            <string>Inter-Medium</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Directory Controller-->
+        <scene sceneID="7Fb-DT-PXr">
+            <objects>
+                <viewController storyboardIdentifier="directoryVC" id="vgV-sH-ec1" customClass="DirectoryController" customModule="AskoMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Lo-mU-FYz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uDS-wI-Ylw">
+                                <rect key="frame" x="16" y="59" width="361" height="793"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Справочник страховых программ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaN-1t-EhN">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="9To-Ft-JlS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cGj-J8-7QD">
+                                        <rect key="frame" x="0.0" y="76" width="361" height="717"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="findCell" rowHeight="188" id="5l7-Ai-eZC" customClass="DirectoryCell" customModule="AskoMed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="361" height="188"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5l7-Ai-eZC" id="UEw-wk-y7M">
+                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="188"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFI-uF-ODc">
+                                                            <rect key="frame" x="0.0" y="8" width="361" height="172"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбор страховой программы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7L-EF-rOf">
+                                                                    <rect key="frame" x="16" y="15.999999999999998" width="329" height="18.333333333333321"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uLN-pj-ch4">
+                                                                    <rect key="frame" x="16" y="46.333333333333343" width="329" height="48.666666666666657"/>
+                                                                    <segments>
+                                                                        <segment title="Полис"/>
+                                                                        <segment title="Иммунокарта"/>
+                                                                    </segments>
+                                                                    <color key="selectedSegmentTintColor" red="0.31242156030000001" green="0.67405647040000005" blue="0.54708415269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </segmentedControl>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Выберите страховую программу" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w6n-5T-Wlo" customClass="RoundedField" customModule="AskoMed" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="106" width="329" height="50"/>
+                                                                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="GJw-Ip-5iS"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="15"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="w6n-5T-Wlo" secondAttribute="bottom" constant="16" id="1ER-yG-ZLJ"/>
+                                                                <constraint firstItem="l7L-EF-rOf" firstAttribute="leading" secondItem="lFI-uF-ODc" secondAttribute="leading" constant="16" id="8Bo-DK-g5U"/>
+                                                                <constraint firstAttribute="trailing" secondItem="w6n-5T-Wlo" secondAttribute="trailing" constant="16" id="8V1-47-vS5"/>
+                                                                <constraint firstItem="w6n-5T-Wlo" firstAttribute="leading" secondItem="lFI-uF-ODc" secondAttribute="leading" constant="16" id="Cjb-Ww-cXX"/>
+                                                                <constraint firstItem="w6n-5T-Wlo" firstAttribute="top" secondItem="uLN-pj-ch4" secondAttribute="bottom" constant="12" id="JT5-F3-6L7"/>
+                                                                <constraint firstItem="uLN-pj-ch4" firstAttribute="leading" secondItem="lFI-uF-ODc" secondAttribute="leading" constant="16" id="NAd-1S-77z"/>
+                                                                <constraint firstItem="l7L-EF-rOf" firstAttribute="top" secondItem="lFI-uF-ODc" secondAttribute="top" constant="16" id="SFe-K5-2oO"/>
+                                                                <constraint firstItem="uLN-pj-ch4" firstAttribute="top" secondItem="l7L-EF-rOf" secondAttribute="bottom" constant="12" id="VMC-bQ-ays"/>
+                                                                <constraint firstAttribute="trailing" secondItem="l7L-EF-rOf" secondAttribute="trailing" constant="16" id="fpM-jE-Njx"/>
+                                                                <constraint firstAttribute="trailing" secondItem="uLN-pj-ch4" secondAttribute="trailing" constant="16" id="hRa-dR-bQJ"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="lFI-uF-ODc" secondAttribute="bottom" constant="8" id="Xso-HY-Hwd"/>
+                                                        <constraint firstItem="lFI-uF-ODc" firstAttribute="top" secondItem="UEw-wk-y7M" secondAttribute="top" constant="8" id="nJI-hQ-EXD"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lFI-uF-ODc" secondAttribute="trailing" id="tMz-Mu-i7E"/>
+                                                        <constraint firstItem="lFI-uF-ODc" firstAttribute="leading" secondItem="UEw-wk-y7M" secondAttribute="leading" id="vkT-kE-0Oy"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="backView" destination="lFI-uF-ODc" id="eEd-ud-mFh"/>
+                                                    <outlet property="searchField" destination="w6n-5T-Wlo" id="hUz-0c-Pvk"/>
+                                                    <outlet property="segmentControll" destination="uLN-pj-ch4" id="Vxp-Ck-BTS"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="vgV-sH-ec1" id="EOz-bz-Ahr"/>
+                                            <outlet property="delegate" destination="vgV-sH-ec1" id="m7v-V8-blV"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMf-qO-j0I">
+                                <rect key="frame" x="16" y="756" width="361" height="50"/>
+                                <color key="backgroundColor" red="0.31242156030000001" green="0.67405647040000005" blue="0.54708415269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hLQ-pG-PIx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Перейти"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PZ9-RF-WGe"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uDS-wI-Ylw" firstAttribute="top" secondItem="PZ9-RF-WGe" secondAttribute="top" id="5eN-48-Rx7"/>
+                            <constraint firstItem="uDS-wI-Ylw" firstAttribute="trailing" secondItem="PZ9-RF-WGe" secondAttribute="trailing" constant="-16" id="Efo-8B-lsL"/>
+                            <constraint firstAttribute="bottom" secondItem="uDS-wI-Ylw" secondAttribute="bottom" id="MOI-Fp-gtw"/>
+                            <constraint firstItem="aMf-qO-j0I" firstAttribute="leading" secondItem="PZ9-RF-WGe" secondAttribute="leading" constant="16" id="PGR-Dv-cSj"/>
+                            <constraint firstItem="uDS-wI-Ylw" firstAttribute="leading" secondItem="PZ9-RF-WGe" secondAttribute="leading" constant="16" id="fFt-qy-F7u"/>
+                            <constraint firstItem="PZ9-RF-WGe" firstAttribute="trailing" secondItem="aMf-qO-j0I" secondAttribute="trailing" constant="16" id="pgw-9j-PRP"/>
+                            <constraint firstItem="PZ9-RF-WGe" firstAttribute="bottom" secondItem="aMf-qO-j0I" secondAttribute="bottom" constant="12" id="sr2-CF-yDy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="cGj-J8-7QD" id="8Im-SG-nnw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xfv-xc-f3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
